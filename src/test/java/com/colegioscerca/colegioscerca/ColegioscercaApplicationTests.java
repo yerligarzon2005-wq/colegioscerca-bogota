@@ -1,12 +1,13 @@
-package com.colegioscerca;
+package com.colegioscerca.colegioscerca;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ColegiosCercaApplicationTests {
+class ColegioscercaApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
+	@Test
+	void contextLoads() {
+	}
+
 }
