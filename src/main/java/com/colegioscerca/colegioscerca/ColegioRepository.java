@@ -15,7 +15,7 @@ public class ColegioRepository {
 
     private final List<Colegio> colegios;
 
-    // Al arrancar, lee data/colegios.json y lo convierte en objetos Colegio
+   
     public ColegioRepository(ObjectMapper mapper) throws IOException {
         try (InputStream in = new ClassPathResource("data/colegios.json").getInputStream()) {
             List<Fila> filas = mapper.readValue(in, new TypeReference<List<Fila>>() {});
@@ -27,7 +27,7 @@ public class ColegioRepository {
         return colegios;
     }
 
-    // Solo se toman 5 campos del JSON; el resto (teléfono, correo, etc.) se ignora
+    
     @JsonIgnoreProperties(ignoreUnknown = true)
     public record Fila(String nombreestablecimiento, String direccion, String zona,
                        String niveles, String jornada) {
